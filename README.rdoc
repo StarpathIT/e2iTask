@@ -1,28 +1,27 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# e2iTask Management
 
-Things you may want to cover:
+This ruby application is being created by [Kumar](starpathit.com) from StarpathIT.
+Contact : [lalith.kkvn@technologist.com]
+Blog : [techminer.tumblr.com]
+Website : [www.starpathit.com]
 
-* Ruby version
 
-* System dependencies
+* Ruby version - ruby 2.0.0p247 (2013-06-27 revision 41674) [x86_64-darwin12.3.0]
 
-* Configuration
+* System dependencies - Java (mainly)
 
-* Database creation
+* Configuration - Configure Git Repo URL, and Heorku.
+
+* Database creation - You can use any Database of your choice. Make sure you choose the one that complies with Heroku as that is the primary production platform for us.
 
 * Database initialization
 
-* How to run the test suite
+* How to run the test suite - Rspec, Factory Girl, Ruby Unit tests.
 
 * Services (job queues, cache servers, search engines, etc.)
 
-* Deployment instructions
+* Deployment instructions (Read Heroku for deployment to its platform for FREE !)
 
 * ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
