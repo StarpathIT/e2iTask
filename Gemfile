@@ -11,6 +11,10 @@ gem 'bootstrap-will_paginate', '0.0.9'
 gem 'omniauth'
 gem 'omniauth-facebook', '1.4.0'
 gem "paperclip", :git => "git://github.com/thoughtbot/paperclip.git"
+gem "mongo"
+gem 'mongoid', git: 'https://github.com/mongoid/mongoid.git'
+gem "bson"
+gem "bson_ext"
 
 group :development, :test do
   gem 'rspec-rails', '2.13.1'
@@ -18,7 +22,7 @@ group :development, :test do
   gem 'spork-rails', '4.0.0'
   gem 'guard-spork', '1.5.0'
   gem 'childprocess', '0.3.9'
-  gem 'sqlite3'
+  # gem 'sqlite3'
 end
 
 group :test do

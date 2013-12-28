@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+<h1>Profile</h1>
+
+<div class="row">
+  <div class="span6 offset3">
+    Fname:
+  <%= @user.fname %> </br>
+Lname:
+  <%= @user.lname %> </br>
+Email:
+  <%= @user.email %> </br>
+Phone:
+  <%= @user.phone %> </br>
+City:
+  <%= @user.city %> </br>
+
+<%= link_to 'Edit', edit_user_path(@user), class: "btn btn-large btn-primary"%> |
+<%= link_to 'Back', users_path, class: "btn btn-large btn-primary"%>
+  </div>
+</div>
