@@ -1,5 +1,9 @@
 class UsersController < ApplicationController
-  before_action :set_user, only: [:show, :edit, :update, :destroy]
+  # invoking signed_in_user method.
+  # Filter acts only on edit and update.
+  before_action :signed_in_user, only: [:index, :edit, :update]
+  before_action :correct_user, only: [:show, :edit, :update, :destroy]
+  before_action :admin_user, only: :destroy
 
   # GET /users
   # GET /users.json
@@ -10,6 +14,7 @@ class UsersController < ApplicationController
   # GET /users/1
   # GET /users/1.json
   def show
+    @user = User.find(params[:id]) # params used to retrieve user id.
   end
 
   # GET /users/new
@@ -24,21 +29,13 @@ class UsersController < ApplicationController
   # POST /users
   # POST /users.json
   def create
-    @user = User.new(user_params)   
-    # if @user.save
-    #   redirect_to @user
-    #   flash[:success] = "User was successfully created"
-    # else 
-    #   render 'new' 
-     respond_to do |format|
-      if @user.save  
-        format.html { redirect_to @user, notice: 'User was successfully created.' }
-        # format.json { render action: 'show', status: :created, location: @user }
-      else
-        # render 'new'
-        format.html { render action: 'new' }
-        format.json { render json: @user.errors, status: :unprocessable_entity }
-      end
+    @user = User.new(user_params)
+    if @user.save
+       sign_in @user
+       flash[:success] = "User was successfully created"
+       redirect_to @user
+    else
+       render 'new'
     end
   end
 
@@ -67,13 +64,27 @@ class UsersController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_user
-      @user = User.find(params[:id])
+
+  # Never trust parameters from the scary internet, only allow the white list through.
+    def user_params
+      params.require(:user).permit(:fname, :lname, :email, :password, :phone, :city)
     end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def user_params
-      params.require(:user).permit(:fname, :lname, :email, :password, :password_confirmation, :phone, :city)
+  # Before filters
+    def signed_in_user
+    unless signed_in?
+      store_location
+      redirect_to signin_url, notice: "Please sign in."
+    end
+    end
+
+    # Use callbacks to share common setup or constraints between actions.
+    def correct_user
+      @user = User.find(params[:id])
+      redirect_to(root_url) unless current_user?(@user)
+    end
+
+    def admin_user
+      redirect_to(root_url) unless current_user.admin?
     end
 end

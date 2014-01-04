@@ -3,7 +3,7 @@
   <div class="span6 offset3">
 <%= form_for(@user) do |f| %>
 <%= render 'fields', f:f%>
-<%= f.submit "Save Changes", class: "btn btn-large btn-primary" %> |
+<%= f.submit "Save Changes", class: "btn btn-large btn-success" %> |
 <%= link_to 'Show', @user, class: "btn btn-large btn-primary" %> |
 <%= link_to 'Back', users_path, class: "btn btn-large btn-primary"%>
 <% end %>

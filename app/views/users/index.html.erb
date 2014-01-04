@@ -1,6 +1,8 @@
-<h1>Listing users</h1>
+<h1>Configure
+  <span class="icon-user"></span><span class="icon-user"></span><span class="icon-user"></span><span class="icon-list"></span>
+</h1>
 
-<table>
+<table class="table table-hover table-striped table-responsive">
   <thead>
     <tr>
       <th>Fname</th>
@@ -8,28 +10,29 @@
       <th>Email</th>
       <th>Phone</th>
       <th>City</th>
-      <th></th>
-      <th></th>
-      <th></th>
+      <th>Show</th>
+      <th>Edit</th>
+      <th>Delete</th>
     </tr>
   </thead>
 
   <tbody>
     <% @users.each do |user| %>
-      <tr>
+      <tr class="warning">
         <td><%= user.fname %></td>
         <td><%= user.lname %></td>
         <td><%= user.email %></td>
         <td><%= user.phone %></td>
         <td><%= user.city %></td>
-        <td><%= link_to 'Show', user, class: "btn btn-large btn-success "%></td>
-        <td><%= link_to 'Edit', edit_user_path(user), class: "btn btn-large btn-primary"%></td>
-        <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-large btn-warning"%></td>
+        <td><%= link_to '', user, class: "icon-eye-open"%></td>
+        <td><%= link_to '', edit_user_path(user), class: "icon-edit"%></td>
+        <td><%= link_to '', user, method: :delete, data: { confirm: 'Are you sure?' }, class: "icon-trash"%></td>
       </tr>
     <% end %>
   </tbody>
 </table>
 
 <br>
-
-<%= link_to 'New User', new_user_path, class: "btn btn-large btn-primary"%>
+<p>Want to <span class="badge">ADD A NEW STAFF</span> member to your group ? <%= link_to 'Add New Staff', new_user_path, class: "btn btn-large btn-primary"%> </p>
+<br>
+<p>Want to <span class="badge">ASSIGN A NEW TASK</span> to a staff member ? &nbsp;&nbsp;&nbsp;<%= link_to 'Add New Task', task_path, class: "btn btn-large btn-primary"%> </p>
