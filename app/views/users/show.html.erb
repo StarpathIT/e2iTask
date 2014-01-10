@@ -3,16 +3,16 @@
 
 <div class="row">
   <div class="span6 offset3">
-First name:
-  <%= @user.fname %> </br>
-Last name:
-  <%= @user.lname %> </br>
-Email:
-  <%= @user.email %> </br>
-Phone:
-  <%= @user.phone %> </br>
-City:
-  <%= @user.city %> </br>
+<p>First name:
+  <%= @user.fname %></p> </br>
+<p>Last name:
+  <%= @user.lname %></p> </br>
+<p>Email:
+  <%= @user.email %></p> </br>
+<p>Phone:
+  <%= @user.phone %></p> </br>
+<p>City:
+  <%= @user.city %></p> </br>
 
 <%= link_to 'Edit', edit_user_path(@user), class: "btn btn-large btn-primary"%> |
 <%= link_to 'Back', users_path, class: "btn btn-large btn-primary"%>

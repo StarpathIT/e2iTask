@@ -1,5 +1,44 @@
 <% provide(:title, 'About Us') %>
 <h1>About Us</h1>
-<div class="center hero-unit">
-    <strong>Mobile Cloud</strong> is a cloud based data management tool that helps you create dynamic forms on any Mobile device like iPhone, iPad or Android. You could pick and choose to create a dynamic form that has text fields, multi choice fields including bar code scanning buttons in your form. Any kind of data push to Mobile devices or data submission back to the cloud is made easy and simple. This tool is a great fit if you have field staff working for you that gets tasks assigned on a regular basis and update statuses back to you when the tasks are accomplished. </p>  
+<div class="well container">
+    <strong>Mobile Cloud</strong> is a cloud based data management tool that helps you create dynamic forms on any Mobile device like iPhone, iPad or Android. You could pick and choose to create a dynamic form that has text fields, multi choice fields including bar code scanning buttons in your form. Any kind of data push to Mobile devices or data submission back to the cloud is made easy and simple. This tool is a great fit if you have field staff working for you that gets tasks assigned on a regular basis and update statuses back to you when the tasks are accomplished.
+</div>
+
+<div class="container">
+  <div class="col-xs-6 col-sm-4">
+    <div class="panel panel-primary">
+      <div class="panel-heading">Basic Plan</div>
+      <div class="panel-body">
+        <h1 class="text-info">Free</h1><h2 class="text-info">for first 5 Forms</h2>
+      </div>
+      <div class="panel-footer">
+        <%= link_to "Sign Up Now", signup_path, class: "btn btn-info btn-lg btn-block"%>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-xs-6 col-sm-4">
+    <div class="panel panel-primary">
+      <div class="panel-heading">Pro Plan</div>
+      <div class="panel-body" id="panelbd">
+        <h1 class="text-warning">$ 4.99</h1><h2 class="text-warning">for 5-10 Forms</h2>
+      </div>
+      <div class="panel-footer">
+        <%= link_to "Sign Up Now", signup_path, class: "btn btn-info btn-lg btn-block"%>
+      </div>
+    </div>
+  </div>
+  <!-- Optional: clear the XS cols if their content doesn't match in height -->
+  <div class="clearfix visible-xs"></div>
+  <div class="col-xs-6 col-sm-4">
+    <div class="panel panel-primary">
+      <div class="panel-heading">Enterprise Plan</div>
+      <div class="panel-body">
+        <h1 class="text-info">$ 9.99</h1><h2 class="text-info">for 10-100 Forms</h2>
+      </div>
+      <div class="panel-footer">
+        <%= link_to "Sign Up Now", signup_path, class: "btn btn-info btn-lg btn-block"%>
+      </div>
+    </div>
+  </div>
 </div>

@@ -1,0 +1,42 @@
+/* Panel */
+#panelbd {
+    background-color: beige;
+    background-position: 50% 50%;
+}
+
+.container {
+    width: 100%;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-top: 0px;
+}
+
+.homeControls {
+    text-align: center;
+    padding-top: 12px;
+}
+
+/* footer */
+
+.foot {
+    margin-top: 45px;
+    padding-top: 5px;
+    border-top: 1px solid #eaeaea;
+    color: #999;}
+a {
+    color: #555;}
+&:hover {
+    color: #222;
+}
+small {
+    float: left;
+    padding-left: 10px;
+}
+ul {
+    float: right;
+    padding-right: 10px;
+    list-style: none;}
+li {
+    float: left;
+    margin-left: 10px;
+}
