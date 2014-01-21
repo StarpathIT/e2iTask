@@ -2,11 +2,12 @@ class Task
   include Mongoid::Document
   include Mongoid::Timestamps
 
-  field :taskTitle, type: String
-  field :taskDescription, type: String
-  field :assignTo, type: String
-  #field :visibleFields, type: String
-
+  field :assignTo, type: User
+  field :owner, type: User
+  #Array of FormField
+  field :fields, type: Array
+  field :template, type: Boolean
+  field :parent, type: String
   validates :taskTitle, presence: true
   validates :taskDescription, presence: true
   validates :assignTo, presence: true
