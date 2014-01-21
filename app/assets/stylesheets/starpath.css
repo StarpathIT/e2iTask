@@ -1,7 +1,6 @@
 /* Panel */
 #panelbd {
-    background-color: beige;
-    background-position: 50% 50%;
+    background-color: #285e8e;
 }
 
 .container {
@@ -9,11 +8,13 @@
     padding-left: 0px;
     padding-right: 0px;
     padding-top: 0px;
+    padding-bottom: 20px;
 }
 
 .homeControls {
+    font-weight: 900;
     text-align: center;
-    padding-top: 12px;
+    padding-top: 20px;
 }
 
 /* footer */
@@ -39,4 +40,9 @@ ul {
 li {
     float: left;
     margin-left: 10px;
+}
+
+#heading {
+    font-family: fantasy;
+    padding-top: 20px;"
 }
