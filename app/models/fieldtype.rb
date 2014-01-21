@@ -16,4 +16,5 @@ class FieldType
   FieldType.add_item :COMBO, 2
   FieldType.add_item :PHOTO, 3
   FieldType.add_item :PAYMENT, 4
+  FieldType.add_item :DATE, 5
 end

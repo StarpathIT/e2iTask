@@ -1,3 +1,25 @@
+=begin
+
+Form Creator/Administrator /Dyno Owner = {
+    "email" : "kunapuli09@gmail.com",
+    "name" : "krishna",
+    "phone" : "7202802571",
+    "password" : "password",
+    "role" : "OWNER",
+    "ObjectId" : "51c25b640364a3b7c24240d2"
+  }
+
+
+Field Staff/Executor /Dyno Executor  {
+    "email" : "nlkunapuli@gmail.com",
+    "name" : "neha",
+    "phone" : "7202802753",
+    "password" : "password",
+    "role" : "EXECUTOR",
+    "ObjectId" : "51c25cf50364a3b7c24240d3"
+  }
+
+=end
 class User
   include Mongoid::Document  
   include Mongoid::Timestamps
