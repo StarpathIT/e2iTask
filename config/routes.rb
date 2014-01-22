@@ -3,6 +3,7 @@ E2itask::Application.routes.draw do
   resources :users
   resources :sessions, only: [:new, :create, :destroy]
   resources :tasks, only: [:new, :create, :index]
+  resources :contacts, only: [:new, :create]
 
   root 'static_pages#home'
   match 'auth/:provider/callback', to: 'sessions#fbcreate', via: [:get, :post]
@@ -12,6 +13,7 @@ E2itask::Application.routes.draw do
   match '/signout', to: 'sessions#destroy',     via: 'delete' # HTTP DELETE request
   match '/help',    to: 'static_pages#help',    via: 'get'
   match '/about',   to: 'static_pages#about',   via: 'get'
+  match '/price',   to: 'static_pages#pricing', via: 'get'
   match '/contact', to: 'static_pages#contact', via: 'get'
   match '/task',    to: 'tasks#new',            via: 'get'
 

@@ -3,12 +3,12 @@
 
 <div class="row">
   <div class="span6 offset3">
-    <%= image_tag("task3.png") %>
+    <%= image_tag("task3.png", width: 700, id: "center") %>
     <%= form_for(@task) do |f| %> <!--form_for helper takes a block with one variable. |f| for form-->
         <!-- Rails creates form tag using @task; Rails figures that @task is of Class Task; Rails knows to construct  form with POST method-->
         <%= render 'taskfields', f: f %>
-        <%= f.submit "Save Task", class: "btn btn-large btn-primary" %>
-        <%= link_to "Cancel", users_path, class: "btn btn-large btn-primary" %>
+        <%= f.submit "Save Task", class: "btn btn-lg btn-primary" %>
+        <%= link_to "Cancel", users_path, class: "btn btn-lg btn-primary" %>
   <% end %>
   </div>
 </div>

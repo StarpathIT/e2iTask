@@ -5,7 +5,7 @@
     <%= form_for(@user) do |f| %> <!--form_for helper takes a block with one variable. |f| for form-->
     <!-- Rails creates form tag using @user; Rails figures that @user is of Class User; Rails knows to construct  form with POST method-->
       <%= render 'fields', f: f %>
-      <%= f.submit "Create my account", class: "btn btn-large btn-primary" %>
+      <%= f.submit "Create my account", class: "btn btn-lg btn-primary" %>
     <% end %>
   </div>
 </div>

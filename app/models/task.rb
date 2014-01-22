@@ -92,10 +92,12 @@ class Task
   field :fields, type: Array
   field :template, type: Boolean
   field :parent, type: String
-  validates :taskTitle, presence: true
-  validates :taskDescription, presence: true
+
   validates :assignTo, presence: true
-  #validates :visibleFields, presence: true
+  validates :owner, presence: true
+  validates :fields, presence: true
+  validates :template, presence: true
+  validates :parent, presence: true
 
   #belongs_to :user
 end

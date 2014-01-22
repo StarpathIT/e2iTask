@@ -3,8 +3,6 @@
 <table class="table table-hover table-responsive">
   <thead>
   <tr>
-    <th>Task</th>
-    <th>Description</th>
     <th>Assigned To <span class="icon-user"></span></th>
   </tr>
   </thead>
@@ -12,8 +10,6 @@
   <tbody>
   <% @tasks.each do |task| %>
       <tr class="info">
-        <td><%= task.taskTitle %></td>
-        <td><%= task.taskDescription %></td>
         <% @doc = User.find_by _id: task.assignTo %>
         <% parsed_String= JSON.parse(@doc.to_json) %>
         <td><%= parsed_String["fname"] + "\t"+ parsed_String["lname"] %></td>
@@ -22,5 +18,5 @@
   </tbody>
 </table>
 
-<%= link_to "Assign Task", task_path, class: "btn btn-large btn-primary" %>
-<%= link_to "Cancel", users_path, class: "btn btn-large btn-primary" %>
+<%= link_to "Assign Task", task_path, class: "btn btn-lg btn-primary" %>
+<%= link_to "Cancel", users_path, class: "btn btn-lg btn-primary" %>
