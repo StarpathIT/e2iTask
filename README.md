@@ -1,6 +1,6 @@
 == README
 
-# e2iTask Management
+# FormDyno - Dynamic Forms
 
 This ruby application is being created by [Kumar](starpathit.com) from StarpathIT.
 Contact : [lalith.kkvn@technologist.com]

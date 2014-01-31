@@ -1,7 +1,23 @@
+require 'TaskField'
+
+class Dyno
+  include Mongoid::Document
+  include Mongoid::Timestamps
+
+  field :assignTo, type: User
+  field :owner, type: User
+  #Array of FormField
+  field :fields, type: Array
+  field :template, type: Boolean
+  field :parent, type: String
+
+  has_many :taskfields
+  validates :assignTo, presence: true
+end
+
 =begin
 
-
-Dyno /Form / Task Definition = {
+Dyno /Form / Dyno Definition = {
     "ObjectId" : "5154fbfe1a882294c9631a8c",
     "title" : "Cable Installation Form",
     "assignedTo" : "51c25cf50364a3b7c24240d3",
@@ -40,7 +56,7 @@ Dyno /Form / Task Definition = {
     ]
   }
 
-DynoData /FormData / Task =
+DynoData /FormData / Dyno =
   {
     "ObjectId" : "5154fbfe1a882294c9631a8c",
     "title" : "Cable Installation Form",
@@ -81,23 +97,3 @@ DynoData /FormData / Task =
   }
 
 =end
-
-class Task
-  include Mongoid::Document
-  include Mongoid::Timestamps
-
-  field :assignTo, type: User
-  field :owner, type: User
-  #Array of FormField
-  field :fields, type: Array
-  field :template, type: Boolean
-  field :parent, type: String
-
-  validates :assignTo, presence: true
-  validates :owner, presence: true
-  validates :fields, presence: true
-  validates :template, presence: true
-  validates :parent, presence: true
-
-  #belongs_to :user
-end

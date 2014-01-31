@@ -1,6 +1,6 @@
-# Add your own tasks in files placed in lib/tasks ending in .rake,
-# for example lib/tasks/capistrano.rake, and they will automatically be available to Rake.
+# Add your own dynos in files placed in lib/dynos ending in .rake,
+# for example lib/dynos/capistrano.rake, and they will automatically be available to Rake.
 
 require File.expand_path('../config/application', __FILE__)
 
-E2itask::Application.load_tasks
+FormDyno::Application.load_tasks

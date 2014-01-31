@@ -1,21 +1,20 @@
-E2itask::Application.routes.draw do
+FormDyno::Application.routes.draw do
 
   resources :users
   resources :sessions, only: [:new, :create, :destroy]
-  resources :tasks, only: [:new, :create, :index]
-  resources :contacts, only: [:new, :create]
+  resources :dynos, only: [:new, :create, :index]
 
   root 'static_pages#home'
-  match 'auth/:provider/callback', to: 'sessions#fbcreate', via: [:get, :post]
-  match 'auth/failure', to: redirect('/'), via: [:get, :post]
-  match '/signup',  to: 'users#new',            via: 'get'
-  match '/signin',  to: 'sessions#new',         via: 'get'
-  match '/signout', to: 'sessions#destroy',     via: 'delete' # HTTP DELETE request
-  match '/help',    to: 'static_pages#help',    via: 'get'
-  match '/about',   to: 'static_pages#about',   via: 'get'
-  match '/price',   to: 'static_pages#pricing', via: 'get'
-  match '/contact', to: 'static_pages#contact', via: 'get'
-  match '/task',    to: 'tasks#new',            via: 'get'
+  match 'auth/:provider/callback', to: 'sessions#fbcreate',     via: [:get, :post]
+  match 'auth/failure',            to: redirect('/'),           via: [:get, :post]
+  match '/signup',                 to: 'users#new',             via: 'get'
+  match '/signin',                 to: 'sessions#new',          via: 'get'
+  match '/signout',                to: 'sessions#destroy',      via: 'delete' # HTTP DELETE request
+  match '/help',                   to: 'static_pages#help',     via: 'get'
+  match '/about',                  to: 'static_pages#about',    via: 'get'
+  match '/price',                  to: 'static_pages#pricing',  via: 'get'
+  match '/contact',                to: 'static_pages#contact',  via: 'get'
+  match '/dyno',                   to: 'dynos#new',             via: 'get'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

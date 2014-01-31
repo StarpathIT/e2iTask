@@ -34,7 +34,7 @@ class User
   field :remember_token, type: String
   field :password_digest, type: String
 
-  #has_many :tasks
+  #has_many :dynos
   before_save { self.email = email.downcase }
 
 	# callback method that creates a remember_token before creating a new user in DB

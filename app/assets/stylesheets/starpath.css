@@ -1,3 +1,10 @@
+/* Mixin (box_sizing) allows group of CSS rules to be packaged and used for multiple elements*/
+@mixin box_sizing {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
 /* universal */
 
 html {
@@ -117,16 +124,42 @@ li {
     padding-top: 0px;
 }
 
+.debug_dump {
+    clear: both;
+    float: left;
+    width: 100%;
+    margin-top: 45px;
+@include box_sizing;
+}
+
+/* flash error*/
+#errorExplanation {
+    background-color: lightpink;
+    color: #f00;}
+#errorExplanation ul {
+    background-color: lightpink;
+    list-style: none;
+    list-style-position: outside;
+    margin: 0 0 18px 0;
+}
+
+/* forms */
+input, textarea, select, .uneditable-input {
+    border: 1px solid #bbb;
+    width: auto;
+    margin-bottom: 15px;
+@include box_sizing;
+}
+
+input {
+    height: auto !important;
+}
+
+#jumbobg {
+    background-image: url("about/formfill6.png");
+    background-repeat: no-repeat;
+}
 /* Colors */
 .color {
     color : darkorange;
-}
-#fbcolor {
-    background-color: #285e8e;
-}
-#licolor {
-    background-color: #2aabd2;
-}
-#twcolor {
-    background-color: skyblue;
 }

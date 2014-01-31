@@ -1,0 +1,14 @@
+<% provide(:title, 'Add Dyno') %>
+<h1>Create A Dyno<span class="icon-tasks"></span></h1>
+
+<div class="row">
+  <div class="span6 offset3">
+    <%= image_tag("task3.png", width: 700, id: "center") %>
+    <%= form_for(@dyno) do |f| %> <!--form_for helper takes a block with one variable. |f| for form-->
+        <!-- Rails creates form tag using @dyno; Rails figures that @dyno is of Class Dyno; Rails knows to construct  form with POST method-->
+        <%= render 'taskfields', f: f %>
+        <%= f.submit "Save Dyno", class: "btn btn-lg btn-primary" %>
+        <%= link_to "Cancel", users_path, class: "btn btn-lg btn-primary" %>
+  <% end %>
+  </div>
+</div>

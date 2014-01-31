@@ -1,0 +1,41 @@
+<h1>Dynos<span class="icon-list"></span></h1>
+<h2 class="text-danger">Page Under Construction.</h2>
+<h2 class="text-info">--- Displays the Created Dynos List --- Allows owners to assign Tasks using an existing Dyno
+  ---</h2>
+<h2> You have not yet created a Dyno. Create one by clicking below</h2>
+
+
+<!--<table class="table table-hover table-responsive">-->
+<!--<thead>-->
+<!--<tr>-->
+<!--<th>Assigned To <span class="icon-user"></span></th>-->
+<!--</tr>-->
+<!--</thead>-->
+
+<!--<tbody>-->
+<!--
+<% @dynos.each do |task| %>-->
+    <!--<tr class="info">-->
+    <!--
+    <% @doc = User.find_by _id: task.assignTo rescue [] %>-->
+    <!--
+    <% parsed_String= JSON.parse(@doc.to_json) rescue [] %>-->
+    <!--<td><%= parsed_String["fname"] + "\t"+ parsed_String["lname"] rescue [] %></td>-->
+    <!--</tr>-->
+    <!--
+<% end %>-->
+<!--</tbody>-->
+<!--</table>-->
+
+<div class="center">
+  <!--<%= image_tag("task3.png", width: 700, id: "center") %>-->
+  <%= form_for(@dyno) do |f| %> <!--form_for helper takes a block with one variable. |f| for form-->
+      <!-- Rails creates form tag using @dyno; Rails figures that @dyno is of Class Dyno; Rails knows to construct  form with POST method-->
+      <%= render 'dynofields', f: f %>
+  <% end %>
+</div>
+
+<div class="well">
+  <%= link_to "New Dyno", dyno_path, class: "btn btn-lg btn-primary" %>
+  <%= link_to "Cancel", users_path, class: "btn btn-lg btn-primary" %>
+</div>

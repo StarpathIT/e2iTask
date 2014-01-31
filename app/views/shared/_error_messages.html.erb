@@ -1,5 +1,5 @@
 <% if @user.errors.any? %>
-  <div id="error_explanation">
+  <div id="errorExplanation">
     <!--Count returns no.of errors; Pluralize avoid gramatical "1 errors" mistakes-->
     <div class="alert alert-error">
       The form contains <%= pluralize(@user.errors.count, "error") %>.

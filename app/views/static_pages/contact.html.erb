@@ -1,50 +1,36 @@
 <% provide(:title, 'Contact') %>
-<h1>Contact</h1>
+<h1 class="text-info">Contact</h1>
 
-<div class="container">
+<div class="container center">
+  <div class="panel panel-default col-lg-6">
+    <h3>Social Media Contact</h3>
 
-  <div class="col-lg-6">
-    <div class="panel panel-primary">
-      <div class="panel-heading">
-        <h3 class="panel-title">Contact Info</h3>
-      </div>
-      <div class="panel-body">
-        <p>9200 E Mineral Ave, Centennial, CO 80112</p>
+    <p>Join and Follow Us @</p>
 
-        <p>Get in touch with us at: <a href="#">info@starpathit.com</a></p>
+    <p>
+      <strong style="color: #285e8e">Facebook </strong><%= link_to(image_tag("social/facebook.png"), "http://www.facebook.com/StarpathIT", target: '_blank') %>
+      <strong style="color: #2aabd2">LinkedIn </strong><%= link_to(image_tag("social/linkedin.png"), "http://www.linkedin.com/company/starpathit/", target: '_blank') %>
+      <strong style="color: skyblue">Twitter </strong><%= link_to(image_tag("social/twitter.png"), "https://twitter.com/StarpathIT", target: '_blank') %>
+    </p>
 
-        <p class="color">Call Us at <strong>( 303 ) 859 6524</strong></p>
-      </div>
-    </div>
+    <p class="color">Keep in touch!</p>
   </div>
+  <div class="panel panel-default col-lg-6">
+    <h3>Contact Info</h3>
 
-  <div class="col-lg-6">
-    <div class="panel panel-primary">
-      <div class="panel-heading">
-        <h3 class="panel-title">Social Media Contact</h3>
-      </div>
-      <div class="panel-body">
-        <p>Contacting Starpath hasn't been easier than this.</p>
+    <p>9200 E Mineral Ave, Centennial, CO 80112</p>
 
-        <p>
-          <strong style="color: #285e8e">Facebook </strong><%= link_to(image_tag("facebook.png", id: "fbcolor"), "http://www.facebook.com/StarpathIT", target: '_blank') %>
-          <strong style="color: #2aabd2">LinkedIn </strong><%= link_to(image_tag("linkedin.png", id: "licolor"), "http://www.linkedin.com/company/starpathit/", target: '_blank') %>
-          <strong style="color: skyblue">Twitter </strong><%= link_to(image_tag("twitter.png", id: "twcolor"), "https://twitter.com/StarpathIT", target: '_blank') %>
-        </p>
+    <p>Get in touch with us at: <a href="#">info@starpathit.com</a></p>
 
-        <p class="color">Keep in touch!</p></div>
-    </div>
+    <p class="color">Call Us at <strong>( 303 ) 859 6524</strong></p>
   </div>
 </div>
-</div>
-
 <hr>
 
 <div class="container">
 
   <iframe width="100%" height="450" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.google.com/maps?sll=39.00239228505949,-105.55056700000002&amp;sspn=7.478654754674026,9.203939429077376&amp;t=m&amp;q=9200+E+Mineral+Ave,+Centennial,+CO+80112&amp;dg=opt&amp;ie=UTF8&amp;hq=&amp;hnear=9200+E+Mineral+Ave,+Centennial,+Colorado+80112&amp;z=14&amp;ll=39.573636,-104.882188&amp;output=embed"></iframe>
-
-  <div class="container">
-    <h1 class="text-muted">Contact Form</h1>
-  </div>
+</div>
+<div class="container">
+  <h1 class="text-muted">Contact Form</h1>
 </div>

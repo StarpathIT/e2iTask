@@ -1,3 +1,5 @@
+require 'FieldType'
+
 class TaskField
   include Mongoid::Document
 
@@ -12,5 +14,6 @@ class TaskField
   validates :name, presence: true
   validates :type, presence: true
   validates :mobile, presence: true
-  belongs_to :form
+
+  belongs_to :dyno
 end

@@ -10,7 +10,7 @@ require File.expand_path('../boot', __FILE__)
 # you've limited to :test, :development, or :production.
 Bundler.require(:default, Rails.env)
 
-module E2itask
+module FormDyno
   class Application < Rails::Application
     Mongoid.load!("config/mongoid.yml");
     # Settings in config/environments/* take precedence over those specified here.
@@ -18,7 +18,7 @@ module E2itask
     # -- all .rb files in that directory are automatically loaded.
 
     # Set Time.zone default to the specified zone and make Active Record auto-convert to this zone.
-    # Run "rake -D time" for a list of tasks for finding time zone names. Default is UTC.
+    # Run "rake -D time" for a list of dynos for finding time zone names. Default is UTC.
     # config.time_zone = 'Central Time (US & Canada)'
 
     # The default locale is :en and all translations from config/locales/*.rb,yml are auto loaded.
