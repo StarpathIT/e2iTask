@@ -1,23 +1,19 @@
-<%= form_for TaskField.new do |f|%>
 
-<%= f.label :name %>
-<%= f.text_field :name %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
 
-<%= f.label :type %>
-<%= f.text_field :type %>
 
-<%= f.label :mobile %>
-<%= f.text_field :mobile %>
+  <%= f.label :type %>
+  <%= f.text_field :type %>
 
-<%= f.label :order %>
-<%= f.text_field :order %>
 
-<%= f.label :value %>
-<%= f.text_field :value %>
+  <%= f.label :mobile %>
+  <%= f.text_field :mobile %>
 
-    <div class="well">
-      <%= f.submit "Save Dyno", class: "btn btn-lg btn-primary" %>
-      <%= link_to "Cancel", users_path, class: "btn btn-lg btn-primary" %>
-    </div>
 
-<% end %>
+  <%= f.label :order %>
+  <%= f.text_field :order %>
+
+
+  <%= f.label :value %>
+  <%= f.text_field :value %>

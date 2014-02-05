@@ -7,18 +7,20 @@ class TaskFieldsController < ApplicationController
   end
 
   def create
-    @taskfield = TaskField.new(task_params)
-    if @taskfield.save
-      flash[:success] = "Dyno Fields were successfully saved"
-      redirect_to @taskfield
-    else
-      render 'new'
-    end
+    #@taskfield = TaskField.new(task_params)
+    #if @taskfield.save
+    #  flash[:success] = "Dyno Fields were successfully saved"
+    #  redirect_to @taskfield
+    #else
+    #  render 'new'
+    #end
   end
-
-  def task_params
-    params.require(:taskfield).permit(:name, :type)
-  end
+  #
+  #def task_params
+  #  if params[:taskfield].present?
+  #    params.require(:taskfield).permit(:name, :type)
+  #  end
+  #end
 
   def signIn_user
     unless signed_in?
