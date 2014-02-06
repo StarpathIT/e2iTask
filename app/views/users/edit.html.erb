@@ -1,11 +1,13 @@
 <h1>Editing user</h1>
 <div class="container">
-  <div class="span6 offset6">
+  <div class="col-lg-offset-5">
     <%= form_for(@user) do |f| %>
         <%= render 'fields', f: f %>
+        </div>
+        <div class="well center">
         <%= f.submit "Save Changes", class: "btn btn-lg btn-success" %> |
-        <%= link_to 'Show', @user, class: "btn btn-lg btn-primary" %> |
-        <%= link_to 'Back', users_path, class: "btn btn-lg btn-primary" %>
+        <%= link_to 'Show Profile', @user, class: "btn btn-lg btn-primary" %> |
+        <%= link_to 'Users', users_path, class: "btn btn-lg btn-primary" %>
+        </div>
     <% end %>
-  </div>
 </div>

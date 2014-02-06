@@ -129,17 +129,6 @@ li {
 @include box_sizing;
 }
 
-/* flash error*/
-#errorExplanation {
-    background-color: lightpink;
-    color: #f00;}
-#errorExplanation ul {
-    background-color: lightpink;
-    list-style: none;
-    list-style-position: outside;
-    margin: 0 0 18px 0;
-}
-
 #jumbobg {
     background-image: url("about/formfill6.png");
     background-repeat: no-repeat;
@@ -151,7 +140,7 @@ li {
 
 /* forms */
 input, textarea, select, .uneditable-input {
-    border: inset #DADADA 2px;
+    border: solid #2b669a 2px;
     -webkit-border-radius: 3px;
     -moz-border-radius: 3px;
     border-radius: 3px;
