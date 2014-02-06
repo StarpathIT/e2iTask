@@ -1,13 +1,13 @@
 <% provide(:title, 'Add Dyno') %>
-<h1>Ceate A Dyno</h1>
-<h3 class="text-muted">Choose from the following fields to add to your Dyno</h3>
+<h1>Choose from the following fields to add to your Dyno</h1>
+<div id="error" hidden="hidden"></div>
 
 <div class="container center">
-  <div class="col-lg-offset-2">
+  <div class="col-md-offset-2">
 
     <div class="col-md-2 panel panel-default" style="background-color: #CCCCCC">
       <h1 class="text-info">TextBox</h1>
-      <label>Text Box Name </label> <input type="text"> <br>Eg: Customer Name
+      <label>Text Box Name </label> <input type="text" id="ip1" value=""> <br>Eg: Customer Name
       <button type="button" class="btn btn-info btn-lg btn-block" id="textbox" onclick="addTextBox()">Add</button><br>
     </div>
 
@@ -34,13 +34,16 @@
       <label>Date Field Name </label> <input type="text"> <br>Eg: Work Start Date
       <button type="button" class="btn btn-info btn-lg btn-block" id="date">Add</button><br>
     </div>
+
   </div>
 </div>
 
+
 <div id="addtoContainer" class="container center">
   <h1>Your Dyno</h1>
-  <%= image_tag('ipad.png', :id => 'formfields', :class => 'formFields') %>
+  <%= image_tag('ipad.png', :class => 'formFields') %>
 </div>
+
 
 <div class="center">
   <%= form_for TaskField.new do |f| %>

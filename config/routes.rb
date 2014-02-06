@@ -10,13 +10,13 @@ FormDyno::Application.routes.draw do
   match 'auth/failure',            to: redirect('/'),           via: [:get, :post]
   match '/signup',                 to: 'users#new',             via: 'get'
   match '/signin',                 to: 'sessions#new',          via: 'get'
-  match '/signout',                to: 'sessions#destroy',      via: 'delete' # HTTP DELETE request
+  match '/signout',                to: 'sessions#destroy',      via: 'get' # HTTP DELETE request specified in the link_to tag.
   match '/help',                   to: 'static_pages#help',     via: 'get'
   match '/about',                  to: 'static_pages#about',    via: 'get'
   match '/price',                  to: 'static_pages#pricing',  via: 'get'
   match '/contact',                to: 'static_pages#contact',  via: 'get'
-  #match '/dyno',                   to: 'dynos#new',             via: 'get'
   match '/task_fields',            to: 'task_fields#new',       via: 'get'
+  #match '/dyno',                   to: 'dynos#new',             via: 'get'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

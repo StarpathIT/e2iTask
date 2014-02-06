@@ -1,7 +1,7 @@
 <% provide(:title, "Sign in") %>
 <h1>Sign in</h1>
-<div class="row">
-  <div class="span6 offset6">
+<div class="container center">
+  <div class="well">
     <!--Resource name:session, URL-->
     <%= form_for(:session, url: sessions_path) do |f| %>
 
@@ -11,9 +11,8 @@
         <%= f.label :password %>
         <%= f.password_field :password %>
         <!--Submitting the form results in params hash params[:session][:email]....-->
-        <%= f.submit "Sign in", class: "btn btn-lg btn-primary" %>
+        <%= f.submit "Sign in", class: "btn btn-primary" %>
     <% end %>
-
-    <p>New user? <%= link_to "Sign up now!", signup_path %></p>
   </div>
+    <p>New user? <%= link_to "Sign up now!", signup_path, class: "btn btn-lg btn-warning" %></p>
 </div>

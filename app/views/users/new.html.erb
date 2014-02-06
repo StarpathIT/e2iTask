@@ -1,11 +1,11 @@
 <% provide(:title, 'Sign up') %>
 <h1>Sign up</h1>
-<div class="row">
-  <div class="span6 offset6">
-    <%= form_for(@user) do |f| %> <!--form_for helper takes a block with one variable. |f| for form-->
-    <!-- Rails creates form tag using @user; Rails figures that @user is of Class User; Rails knows to construct  form with POST method-->
+<div class="container text-center">
+  <%= form_for(@user) do |f| %> <!--form_for helper takes a block with one variable. |f| for form-->
+      <!-- Rails creates form tag using @user; Rails figures that @user is of Class User; Rails knows to construct  form with POST method-->
       <%= render 'fields', f: f %>
-      <%= f.submit "Create my account", class: "btn btn-lg btn-primary" %>
-    <% end %>
-  </div>
+      <div class="well">
+        <%= f.submit "Create my account", class: "btn btn-lg btn-primary" %>
+      </div>
+  <% end %>
 </div>

@@ -1,10 +1,3 @@
-/* Mixin (box_sizing) allows group of CSS rules to be packaged and used for multiple elements*/
-@mixin box_sizing {
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-}
-
 /* universal */
 
 html {
@@ -147,18 +140,6 @@ li {
     margin: 0 0 18px 0;
 }
 
-/* forms */
-input, textarea, select, .uneditable-input {
-    border: 1px solid #bbb;
-    width: auto;
-    margin-bottom: 15px;
-@include box_sizing;
-}
-
-input {
-    height: auto !important;
-}
-
 #jumbobg {
     background-image: url("about/formfill6.png");
     background-repeat: no-repeat;
@@ -166,4 +147,23 @@ input {
 /* Colors */
 .color {
     color : darkorange;
+}
+
+/* forms */
+input, textarea, select, .uneditable-input {
+    border: inset #DADADA 2px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    height: auto !important;
+    margin-bottom: 15px;
+}
+
+label {
+    font-family: "Helvetica Neue", "Arial", sans-serif;
+    font-weight: normal;
+    font-size: inherit;
 }
