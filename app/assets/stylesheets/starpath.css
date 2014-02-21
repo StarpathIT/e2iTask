@@ -107,11 +107,11 @@ small {
     float: left;
     padding-left: 10px;
 }
-ul {
+#footerul {
     float: right;
     padding-right: 10px;
     list-style: none;}
-li {
+#footerli {
     float: left;
     margin-left: 10px;
 }
@@ -155,4 +155,16 @@ label {
     font-family: "Helvetica Neue", "Arial", sans-serif;
     font-weight: normal;
     font-size: inherit;
+}
+
+#addtoContainer {
+    text-align: center;
+    /*background-image: url("ipad.png");*/
+    /*background-repeat: no-repeat;*/
+    /*height: 820px;*/
+    /*width: 700px;*/
+}
+
+ul {
+align-items: center;
 }

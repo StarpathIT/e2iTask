@@ -1,6 +1,6 @@
 <% provide(:title, "Sign in") %>
 <h1>Sign in</h1>
-<div class="container center">
+<div class="container center" style="background-color: slategray">
   <div class="well">
     <!--Resource name:session, URL-->
     <%= form_for(:session, url: sessions_path) do |f| %>
@@ -13,6 +13,14 @@
         <!--Submitting the form results in params hash params[:session][:email]....-->
         <%= f.submit "Sign in", class: "btn btn-primary" %>
     <% end %>
+    <!--TODO&lt;!&ndash;<h2 class="text-warning"> Forgot your Username / Password ?</h2>&ndash;&gt;-->
   </div>
-    <p>New user? <%= link_to "Sign up now!", signup_path, class: "btn btn-lg btn-warning" %></p>
+  <div class="col-lg-6 col-md-offset-3 panel panel-primary" >
+    <h2 class="text-info"> Sign up in just one click</h2>
+    <h6>(We won't share your information without your permission)</h6>
+    <%= link_to "Google+", "/auth/facebook", id: "sign_in", class: "btn btn-lg btn-info"%>
+    <%= link_to "Facebook", "/auth/facebook", id: "sign_in", class: "btn btn-lg btn-primary"%>
+    <%= link_to "Yahoo!", "/auth/facebook", id: "sign_in", class: "btn btn-lg btn-success"%>
+    <h1 class="text-default"> OR </h1> <h2 class="text-info"> Create an account with us >> <%= link_to "Sign up now!", signup_path, class: "btn btn-lg btn-warning" %></h2>
+  </div>
 </div>

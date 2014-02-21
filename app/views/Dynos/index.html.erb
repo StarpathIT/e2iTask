@@ -20,7 +20,7 @@
     <% @doc = User.find_by _id: task.assignTo rescue [] %>-->
     <!--
     <% parsed_String= JSON.parse(@doc.to_json) rescue [] %>-->
-    <!--<td><%= parsed_String["fname"] + "\t"+ parsed_String["lname"] rescue [] %></td>-->
+    <!--<td><%= parsed_String["firstName"] + "\t"+ parsed_String["lastName"] rescue [] %></td>-->
     <!--</tr>-->
     <!--
 <% end %>-->
@@ -35,7 +35,7 @@
   <% end %>
 </div>
 
-<div class="well">
-  <%= link_to "New Dyno", task_fields_path, class: "btn btn-lg btn-primary" %>
+<div class="well center">
+  <%= link_to "New Dyno", task_fields_path, class: "btn btn-lg btn-success" %>
   <%= link_to "Cancel", dynos_path, class: "btn btn-lg btn-primary" %>
 </div>

@@ -25,8 +25,8 @@ class User
   include Mongoid::Timestamps
   include ActiveModel::SecurePassword
 
-  field :fname, type: String
-  field :lname, type: String
+  field :firstName, type: String
+  field :lastName, type: String
   field :email, type: String
   field :password, type: String
   field :phone, type: String
@@ -41,8 +41,8 @@ class User
 	#"Method reference" - rails looks for method called create_remember_token
 	before_create :create_remember_token
 
-	validates(:fname, presence: true, length: { maximum: 50 })
-	validates(:lname, presence: true, length: { maximum: 50 })
+	validates(:firstName, presence: true, length: { maximum: 50 })
+	validates(:lastName, presence: true, length: { maximum: 50 })
 	validates(:phone, presence: true, length: { minimum: 10, maximum: 10 })
 	validates(:city, presence: true, length: { maximum: 20 })
 

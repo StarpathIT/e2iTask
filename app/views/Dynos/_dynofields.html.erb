@@ -1,5 +1,5 @@
 <%= render 'task_error_messages' %>
 
   <%= f.label :assignTo %>
-  <%= f.select :assignTo, options_for_select(User.all.collect { |user| [user.fname + "\t" +user.lname, user._id] },
+  <%= f.select :assignTo, options_for_select(User.all.collect { |user| [user.firstName + "\t" +user.lastName, user._id] },
                                              :assignTo), :multiple => true, :prompt => 'Select Person', :name => 'dyno[_id][]' %>

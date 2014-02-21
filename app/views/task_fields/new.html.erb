@@ -1,5 +1,5 @@
 <% provide(:title, 'Add Dyno') %>
-<h1 class="text-info">Choose</h1><h3> Fields to add to your Dyno</h3>
+<h1 class="text-primary">[ Add Fields<span class="text-muted"> to your Dyno</span> ]<h2>Its that easy.</h2></h1>
 <div id="error" hidden="hidden"></div>
 
 <div class="container center">
@@ -8,42 +8,49 @@
     <div class="col-md-2 panel panel-default" style="background-color: #CCCCCC">
       <h1 class="text-info">TextBox</h1>
       <label>Text Box Name </label> <input type="text" id="ip1" value=""> <br>Eg: Customer Name
-      <button type="button" class="btn btn-info btn-lg btn-block" id="textbox" onclick="addTextBox()">Add</button><br>
+      <button type="button" class="btn btn-info btn-lg btn-block" id="textbox" onclick="addTextBox()">Add</button>
+      <br>
     </div>
 
     <div class="col-md-2 panel panel-default" style="background-color: #DDDDDD">
       <h1 class="text-success">Dropdown</h1>
-      <label>Drop Down Name </label> <input type="text"> <br>Eg: Status
-      <button type="button" class="btn btn-success btn-lg btn-block" id="dropdown" onclick="addComboBox()">Add</button><br>
+      <label>Drop Down Name </label> <input type="text" id="ip2" value=""><br>
+      <label>Enter Option </label> <input type="text" id="opt" value="">
+      <button type="button" class="btn btn-success btn-lg btn-block" id="dropDownOptions" hidden="" onclick="addDDOption()">Add Option</button>
+      <button type="button" class="btn btn-success btn-lg btn-block" id="dropdown" onclick="addComboBox()">Add</button>
+      <br>
     </div>
 
     <div class="col-md-2 panel panel-default" style="background-color: #CCCCCC">
       <h1 class="text-info">Upload</h1>
-      <label>File Upload Name </label> <input type="text"> <br>Eg: Profile Picture
-      <button type="button" class="btn btn-info btn-lg btn-block" id="photoupload">Add</button><br>
+      <label>File Upload Name </label> <input type="text" id="ip3" value=""> <br>Eg: Profile Picture
+      <button type="button" class="btn btn-info btn-lg btn-block" id="photoupload" onclick="addUploadField()">Add</button>
+      <br>
     </div>
 
     <div class="col-md-2 panel panel-default" style="background-color: #DDDDDD">
-      <h1 class="text-success">Payment</h1>
-      <label>Payment Field Name </label> <input type="text"> <br>Eg: Pay
-      <button type="button" class="btn btn-success btn-lg btn-block" id="payment">Add</button><br>
+      <h1 class="text-warning">Payment</h1>
+      <label>Payment Widget (Stripe) </label>
+      <!--<input type="text" id="ip4" value=""> <br>Eg: Pay-->
+      <button type="button" class="btn btn-warning btn-lg btn-block" id="payment" onclick="addPaymentOption()">Add</button>
+      <br>
     </div>
 
     <div class="col-md-2 panel panel-default" style="background-color: #CCCCCC">
       <h1 class="text-info">Date</h1>
-      <label>Date Field Name </label> <input type="text"> <br>Eg: Work Start Date
-      <button type="button" class="btn btn-info btn-lg btn-block" id="date">Add</button><br>
+      <label>Date Field Name </label> <input type="text" id="ip5" value=""> <br>Eg: Work Start Date
+      <button type="button" class="btn btn-info btn-lg btn-block" id="date" onclick="addDateField()">Add</button>
+      <br>
     </div>
 
   </div>
 </div>
 
+<hr style="border-width: 2px; border-color: #CCCCCC">
 
+<h1 class="text-success" id="hideText" hidden="hidden">Your Dyno</h1>
 <div id="addtoContainer" class="container center">
-  <h1 class="text-success">Your Dyno</h1>
-  <%= image_tag('ipad.png', :class => 'formFields') %>
 </div>
-
 
 <div class="center">
   <%= form_for TaskField.new do |f| %>
