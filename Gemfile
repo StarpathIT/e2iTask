@@ -55,5 +55,6 @@ end
 
 group :production do
   #gem 'pg'
+  #sample
   gem 'rails_12factor', '0.0.2'
 end
