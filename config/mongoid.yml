@@ -33,14 +33,13 @@ development:
         # retry_interval: 1
   # Configure Mongoid specific options. (optional)
   options:
-  #production:
+   production:
 #   sessions:
 #     default:
-#         # Here we put the Mongoid specific configuration options. These are explained
-#         # in more detail next.
-#       ENV['MONGOHQ_URI'] = mongodb://user:pass@troup.mongohq.com:10093/app21949212
-#       uri: <%= ENV['MONGOHQ_URI'] %>
+#       uri: <%= ENV['MONGOHQ_URL'] %>
 #       options:
+#         skip_version_check: true
+#         safe: true # [Warn: It slowers performance !!] 
 #         consistency: :strong
 #         max_retries: 1
 #         retry_interval: 0
