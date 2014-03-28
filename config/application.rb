@@ -12,7 +12,7 @@ Bundler.require(:default, Rails.env)
 
 module FormDyno
   class Application < Rails::Application
-    Mongoid.load!("config/mongoid.yml", :production);
+    Mongoid.load!("config/mongoid.yml");
     # production
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers

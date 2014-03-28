@@ -48,7 +48,7 @@ development:
                - dedicated1.myapp.com:27017
                - dedicated2.myapp.com:27017
                - dedicated3.myapp.com:27017
-             database: mongoid
+             database: formdynos_production
              # We can set session specific options, like reads executing
              # on secondary nodes, and defaulting the session to safe mode.
              options:
@@ -59,10 +59,10 @@ development:
              # This configuration is a Mongos shard server.
              hosts:
                - mongos.myapp.com:27017
-             database: mongoid
+             database: formdynos_production
            # This configuration shows an authenticated replica set via a uri.
            another:
-             uri: mongodb://heroku:thinker@59.1.22.1:27017,59.1.22.2:27017/mongoid
+             uri: mongodb://heroku:thinker@troup.mongohq.com:10093/app21949212
          # Here we put the Mongoid specific configuration options. These are explained
          # in more detail next.
          options:
