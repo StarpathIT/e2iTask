@@ -38,8 +38,8 @@ production:
      default:
          # Here we put the Mongoid specific configuration options. These are explained
          # in more detail next.
-
-       uri: mongodb://heroku:thinker@troup.mongohq.com:10093/app21949212
+       ENV['MONGOHQ_URI'] = mongodb://user:pass@troup.mongohq.com:10093/app21949212
+       uri: <%= ENV['MONGOHQ_URI'] %>
        options:
          consistency: :strong
          max_retries: 1
