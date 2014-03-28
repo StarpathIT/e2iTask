@@ -140,7 +140,7 @@ small {
 
 /* forms */
 input, textarea, select, .uneditable-input {
-    border: solid #2b669a 2px;
+    border: solid #adadad 2px;
     -webkit-border-radius: 3px;
     -moz-border-radius: 3px;
     border-radius: 3px;
@@ -158,11 +158,11 @@ label {
 }
 
 #addtoContainer {
-    text-align: center;
+    background-color: #5e5e5e;
+    /*text-align: center;*/
     /*background-image: url("ipad.png");*/
     /*background-repeat: no-repeat;*/
-    /*height: 820px;*/
-    /*width: 700px;*/
+    /*background-position: 100px;*/
 }
 
 ul {
