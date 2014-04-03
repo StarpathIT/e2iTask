@@ -33,16 +33,13 @@ development:
         # retry_interval: 1
   # Configure Mongoid specific options. (optional)
   options:
-   production:
-#   sessions:
-#     default:
-#       uri: <%= ENV['MONGOHQ_URL'] %>
-#       options:
-#         skip_version_check: true
-#         safe: true # [Warn: It slowers performance !!] 
-#         consistency: :strong
-#         max_retries: 1
-#         retry_interval: 0
+production:
+  sessions:
+    default:
+      uri: <%= ENV['MONGOHQ_URL'] %>
+      options:
+        skip_version_check: true
+        safe: true
 #     # Enable the identity map, needed for eager loading. (default: false)
 #     # identity_map_enabled: false
 
