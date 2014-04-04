@@ -1,9 +1,8 @@
-# gem install mongo bson_ext json
+gem install mongo bson_ext json
 #require 'rubygems'  # if less than Ruby 1.9
 require 'mongo'
 require 'uri'
 require 'json'
-require 'bson'
 
 def get_connection
   return @db_connection if @db_connection
