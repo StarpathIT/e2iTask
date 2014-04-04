@@ -1,4 +1,4 @@
-require 'TaskField'
+#extends TaskField
 
 class Dyno
   include Mongoid::Document
