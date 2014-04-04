@@ -38,8 +38,6 @@ production:
     default:
       uri: <%= ENV['MONGOHQ_URL'] %>
       options:
-        skip_version_check: true
-        safe: true
 #     # Enable the identity map, needed for eager loading. (default: false)
 #     # identity_map_enabled: false
 
