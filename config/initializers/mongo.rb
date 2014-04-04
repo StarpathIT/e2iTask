@@ -3,6 +3,7 @@
 require 'mongo'
 require 'uri'
 require 'json'
+require 'bson'
 
 def get_connection
   return @db_connection if @db_connection
