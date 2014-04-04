@@ -1,4 +1,5 @@
-extends FieldType
+#extends FieldType
+
 class TaskField
   include Mongoid::Document
 
