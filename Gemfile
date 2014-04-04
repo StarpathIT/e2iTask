@@ -15,6 +15,7 @@ gem "mongo"
 gem 'mongoid', git: 'https://github.com/mongoid/mongoid.git'
 gem "bson"
 gem "bson_ext"
+gem 'activesupport'
 
 group :development, :test do
   gem 'rspec-rails', '2.13.1'
