@@ -57,6 +57,6 @@ group :production do
   #gem 'pg'
   #sample
   #active support
-  gem 'activesupport'
+  gem 'activesupport', '~> 4.0.4'
   gem 'rails_12factor', '0.0.2'
 end
